@@ -1,0 +1,29 @@
+{
+  "name": "worker",
+  "version": "1.0.0",
+  "description": "worker service for aws multicontainer product",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/escobard/docker-courses-aws-product.git"
+  },
+  "keywords": [
+    "docker",
+    "aws"
+  ],
+  "author": "Daniel Escobar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/escobard/docker-courses-aws-product/issues"
+  },
+  "homepage": "https://github.com/escobard/docker-courses-aws-product#readme",
+  "dependencies": {
+    "nodemon": "1.18.3",
+    "redis": "2.8.0"
+  }
+}
