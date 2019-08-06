@@ -17,12 +17,17 @@ app.use(bodyParser.json());
 
 // postgress
 const { Pool } = require('pg'),
-pgClient = new Pool({
+pg = new Pool({
     user: pgUser,
     host: pgHost,
     database: pgDatabase,
     pasword: pgPassword,
     port: pgPort
 })
-pgClient.on('error', () => console.log('Lost PG connection'));
+pg.on('error', () => console.log('Lost PG connection'));
+
+// postgress table
+pg
+    .query('CREATE TABLE IF NOT EXISTS values (number INT)')
+    .catch(err => console.log(err));
 
