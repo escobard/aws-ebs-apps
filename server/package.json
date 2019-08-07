@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server for the aws multi container product",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/escobard/docker-courses-aws-product.git"
+  },
+  "keywords": [
+    "docker",
+    "express",
+    "aws"
+  ],
+  "author": "Daniel Escobar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/escobard/docker-courses-aws-product/issues"
+  },
+  "homepage": "https://github.com/escobard/docker-courses-aws-product#readme",
+  "dependencies": {
+    "express": "4.16.3",
+    "pg": "7.4.3",
+    "redis": "2.8.0",
+    "cors": "2.8.4",
+    "nodemon": "1.18.3"
+  }
+}
