@@ -3,7 +3,9 @@ const {
     pgHost,
     pgDatabase,
     pgPassword,
-    pgPort
+    pgPort,
+    redisHost,
+    redisPort
 } = require('./keys'),
 
 // expres
@@ -31,3 +33,14 @@ pg
     .query('CREATE TABLE IF NOT EXISTS values (number INT)')
     .catch(err => console.log(err));
 
+// Redis Client Setup
+const redis = require('redis');
+const redisClient = redis.createClient({
+    host: redisHost,
+    port: redisPort,
+    // if we ever lose connection to Redis, retry to connect every second
+    retry_strategy: () => 1000
+})
+const redisPublisher = redisClient.duplicate();
+
+// Express route handlers
