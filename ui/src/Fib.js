@@ -1,7 +1,7 @@
-import React, { useState, useEffect Component } from 'react'
+import React, { useState, useEffect, Component } from 'react'
 import axios from 'axios'
 
-
+/*
 const FibFunction = () => {
     [seenIndexes, setSeenIndexes] = useState([]);
     [values, setValues] = useState({});
@@ -72,6 +72,7 @@ const FibFunction = () => {
     )
 
 }
+*/
 
 class Fib extends Component {
     state = {
@@ -126,6 +127,7 @@ class Fib extends Component {
     }
 
     render(){
+        return(
         <div>
             <form onSubmit={this.handleSubmit}>
                 <label>
@@ -145,7 +147,8 @@ class Fib extends Component {
                 {this.renderValues()}
             </form>
         </div>
-    }
+        )
+}
 }
 
 export default Fib;
