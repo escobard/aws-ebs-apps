@@ -2,7 +2,7 @@ import React, { useState, useEffect Component } from 'react'
 import axios from 'axios'
 
 
-const Fib = () => {
+const FibFunction = () => {
     [seenIndexes, setSeenIndexes] = useState([]);
     [values, setValues] = useState({});
     [index, setIndex] = useState('');
