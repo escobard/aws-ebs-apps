@@ -3,4 +3,4 @@ WORKDIR '/ui'
 COPY ./package.json ./
 RUN npm install 
 COPY . .
-cmd ["", ]
+CMD ["npm", "run", "start"]
