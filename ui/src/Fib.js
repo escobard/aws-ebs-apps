@@ -1,11 +1,11 @@
 import React, { useState, useEffect, Component } from 'react'
 import axios from 'axios'
 
-/*
+// replace class with function later
 const FibFunction = () => {
-    [seenIndexes, setSeenIndexes] = useState([]);
-    [values, setValues] = useState({});
-    [index, setIndex] = useState('');
+    const [seenIndexes, setSeenIndexes] = useState([]);
+    const [values, setValues] = useState({});
+    const [index, setIndex] = useState('');
 
     useEffect(()=>{
         fetchValues();
@@ -14,12 +14,12 @@ const FibFunction = () => {
 
     const fetchValues = async () => {
         const values = await axios.get('/api/values/current');
-        this.setValues(values.data);
+        setValues(values.data);
     }
 
     const fetchIndexes = async () => {
         const seenIndexes = await axios.get('/api/values/all');
-        this.setSeenIndexes(seenIndexes.data)
+        setSeenIndexes(seenIndexes.data)
     }
 
     const handleSubmit = async (event) =>{
@@ -28,7 +28,7 @@ const FibFunction = () => {
         await axios.post('/api/values', {
             index: index
         });
-        this.setIndex('');
+        setIndex('');
     }
 
     const renderSeenIndexes = () =>{ 
@@ -57,7 +57,7 @@ const FibFunction = () => {
                 </label>
                 <input
                     value={index}
-                    onChange={event => this.setIndex(event.target.value)}
+                    onChange={event => setIndex(event.target.value)}
                 />
                 <button>
                     Submit
@@ -72,7 +72,6 @@ const FibFunction = () => {
     )
 
 }
-*/
 
 class Fib extends Component {
     state = {
