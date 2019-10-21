@@ -19,3 +19,15 @@ services:
       - /server/node_modules
       ## tells docker compose to create a volume for the server directory
       - ./server:/server
+    ## env variables with docker-compose
+    environment:
+      ## uses the redis image specified above
+      - REDIS_HOST=redis
+      ## this is the default redis port
+      - REDIS_PORT=6379
+      ## more on default values: https://hub.docker.com/_/postgres
+      - PGUSER=postgres
+      - PGHOST=postgres
+      - PGDATABASE=postgres
+      - PGPASSWORD=postgres_password
+      - PGPORT=5432
