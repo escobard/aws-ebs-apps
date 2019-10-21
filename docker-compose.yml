@@ -31,3 +31,17 @@ services:
       - PGDATABASE=postgres
       - PGPASSWORD=postgres_password
       - PGPORT=5432
+  ui:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./ui
+    volumes:
+      - /ui/node_modules
+      - ./ui:/ui
+  worker:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./worker
+    volumes:
+    - /worker/node_modules
+    - ./worker:/worker
