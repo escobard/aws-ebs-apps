@@ -7,18 +7,18 @@ services:
   ## more here: https://hub.docker.com/_/redis
   redis:
     image: 'redis:latest'
-  server:
+  api:
     ## builds an image rather than grabbing it from dockerhub
     build:
       ## specifices the specific docker file
       dockerfile: Dockerfile.dev
       ## specifies the docker image root directory
-      context: ./server
+      context: ./api
     volumes:
       ## tells docker compose to avoid creating a volume for this directory
-      - /server/node_modules
-      ## tells docker compose to create a volume for the server directory
-      - ./server:/server
+      - /api/node_modules
+      ## tells docker compose to create a volume for the api directory
+      - ./api:/api
     ## env variables with docker-compose
     environment:
       ## uses the redis image specified above
