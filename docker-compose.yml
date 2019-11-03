@@ -45,3 +45,13 @@ services:
     volumes:
     - /worker/node_modules
     - ./worker:/worker
+  ngnix:
+    ## we set this rule to ensure this image is always running
+    ## any ngnix crashes caused by other services will cause ngnix to restart
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./ngnix
+    ports:
+      ## setting to default 80 for consistency
+      - '80:80'
