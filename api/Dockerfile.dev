@@ -1,0 +1,7 @@
+FROM node:alpine
+WORKDIR '/api'
+COPY ./package.json ./
+# could be improved
+COPY . .
+RUN npm install
+CMD ["npm", "run", "dev"]

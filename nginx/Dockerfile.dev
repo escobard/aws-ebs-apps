@@ -1,0 +1,4 @@
+# official docker repository - https://hub.docker.com/_/nginx
+FROM nginx
+## overwrite existing default docker ngnix file with ours
+COPY ./default.conf ./etc/nginx/conf.d/default.conf
