@@ -1,33 +1,32 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "server for the aws multi container product",
+  "name": "api",
+  "version": "0.0.1",
+  "description": "api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon"
+    "dev": "nodemon -L index.js",
+    "test": "nyc mocha tests/routes/*.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/escobard/docker-courses-aws-product.git"
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
   },
-  "keywords": [
-    "docker",
-    "express",
-    "aws"
-  ],
-  "author": "Daniel Escobar",
+  "author": "escobard",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/escobard/docker-courses-aws-product/issues"
-  },
-  "homepage": "https://github.com/escobard/docker-courses-aws-product#readme",
   "dependencies": {
-    "express": "4.16.3",
-    "pg": "7.4.3",
-    "redis": "2.8.0",
-    "cors": "2.8.4",
-    "nodemon": "1.18.3"
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "pg": "^7.4.3",
+    "sequelize": "^5.21.2"
+  },
+  "devDependencies": {
+    "babel-plugin-istanbul": "^5.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.19.4",
+    "nyc": "^14.1.0",
+    "supertest": "^3.4.2"
   }
 }
