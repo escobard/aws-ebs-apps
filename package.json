@@ -1,0 +1,32 @@
+{
+  "name": "create-app",
+  "version": "1.0.0",
+  "description": "An enterprise platform boilerplate, forked from escobard/create-dapp",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "prettier": "^1.17.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "concurrently --names \"UI,API\" \"npm run test --prefix ui\" \"npm run test --prefix api\" ",
+    "dev": "concurrently --names \"UI,API\" \"npm run start --prefix ui\" \"npm run dev --prefix api\" ",
+    "docker-dev": "docker-compose -f dev.yaml up",
+    "docker-dev-ngnix": "docker-compose -f dev-nginx.yaml up",
+    "prod": "docker-compose -f prod.yaml up",
+    "clean": "docker system prune -a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/escobard/create-dapp.git"
+  },
+  "keywords": [
+    "ethereum"
+  ],
+  "author": "Daniel Escobar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/escobard/create-dapp/issues"
+  },
+  "homepage": "https://github.com/escobard/create-dapp#readme"
+}

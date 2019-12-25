@@ -1,0 +1,31 @@
+@import "../../styles/variables";
+
+// really useful way of finding the elements that contain some id characters - should consider this approach with rebank
+[id*="-note"] {
+  border-bottom: $border-gray;
+  margin: 0 !important;
+  &:hover{
+    cursor: pointer;
+  }
+  i{
+    color: $blue;
+    border: solid 2px $gray-light;
+    box-shadow: none !important;
+    font-size: $font-size-xxxl !important;
+  }
+  .column{
+   padding-left: 0 !important;
+    &.date{
+      text-align: right;
+      padding-right: 0 !important;
+    }
+    &.content{
+      padding-left: $space-lrg !important;
+    }
+    p{
+      color: $gray-medium-dark;
+      font-weight: 400;
+      word-break: break-word;
+    }
+  }
+}

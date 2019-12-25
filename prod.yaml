@@ -1,0 +1,34 @@
+version: '3'
+services:
+  ui:
+    container_name: ui_prod
+    working_dir: /usr/create-app/ui
+    environment:
+      - DOCKER_VARIANT=compose_routing
+      - REACT_APP_DOCKER_VARIANT=nginx_routing
+    build:
+      context: ./ui
+      dockerfile: Dockerfile.prod
+  api:
+    container_name: api_prod
+    working_dir: /usr/create-app/api
+    environment:
+      - DOCKER_VARIANT=nginx_routing
+      - REACT_APP_DOCKER_VARIANT=nginx_routing
+      - PGUSER=postgres
+      - PGHOST=postgres
+      - PGDATABASE=postgres
+      - PGPASSWORD=postgres_password
+      - PGPORT=5432
+    ports:
+    - "4000:4000"
+    build:
+      context: ./api
+      dockerfile: Dockerfile.prod
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile.prod
+      context: ./nginx
+    ports:
+      - '5000:80'
