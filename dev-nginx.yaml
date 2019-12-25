@@ -34,7 +34,12 @@ services:
     command: |
       sh -c "npm run dev"
   postgres:
-    image: 'postgres:latest'
+    container_name: pgdb_dev
+    build:
+      context: ./pgdb
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5432:5432"
   nginx:
     restart: always
     build:

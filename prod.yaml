@@ -25,6 +25,8 @@ services:
     build:
       context: ./api
       dockerfile: Dockerfile.prod
+  postgres:
+    image: 'postgres:latest'
   nginx:
     restart: always
     build:
