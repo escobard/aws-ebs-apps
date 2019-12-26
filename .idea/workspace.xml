@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="749b221e-f394-4a66-a7eb-1bf8575f490e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="749b221e-f394-4a66-a7eb-1bf8575f490e" name="Default Changelist" comment="section 10 - fix: env variables typo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577322994437</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="section 10 - fix: env variables typo">
+      <created>1577371348051</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577371348051</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,17 +118,18 @@
     <MESSAGE value="section 10 - fix: prod fixes for PGDB, debugging prod layers" />
     <MESSAGE value="section 10 - fix: other round of prod Dockerfile fixes" />
     <MESSAGE value="section 10 - fix: all layers are prod ready!" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 10 - fix: all layers are prod ready!" />
+    <MESSAGE value="section 10 - fix: env variables typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 10 - fix: env variables typo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2298" y="483" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577318320093">
       <screen x="0" y="0" width="5120" height="1400" />
     </state>
     <state x="2298" y="483" key="#com.intellij.fileTypes.FileTypeChooser/0.0.5120.1400@0.0.5120.1400" timestamp="1577318320093" />
-    <state x="1288" y="0" width="2544" height="1400" key="CommitChangelistDialog2" timestamp="1577322993421">
+    <state x="1288" y="0" width="2544" height="1400" key="CommitChangelistDialog2" timestamp="1577372094412">
       <screen x="0" y="0" width="5120" height="1400" />
     </state>
-    <state x="1288" y="0" width="2544" height="1400" key="CommitChangelistDialog2/0.0.5120.1400@0.0.5120.1400" timestamp="1577322993421" />
+    <state x="1288" y="0" width="2544" height="1400" key="CommitChangelistDialog2/0.0.5120.1400@0.0.5120.1400" timestamp="1577372094412" />
     <state width="2500" height="388" key="GridCell.Tab.0.bottom" timestamp="1577325199733">
       <screen x="0" y="0" width="5120" height="1400" />
     </state>
