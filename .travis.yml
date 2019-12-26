@@ -3,12 +3,12 @@ services:
   - docker
 
 before_install:
-  - docker build -t escobard/docker-aws-product-ui -f ./ui/Dockerfile.dev ./ui
-  - docker build -t escobard/docker-aws-product-api -f ./api/Dockerfile.dev ./api
+  - docker build -t escobard/docker-aws-product-ui-test -f ./ui/Dockerfile.test ./ui
+  - docker build -t escobard/docker-aws-product-api-test -f ./api/Dockerfile.test ./api
 
 scripts:
-  - docker run escobard/docker-aws-product-ui npm run test -- --coverage
-  - docker run escobard/docker-aws-product-api npm run test
+  - docker run escobard/docker-aws-product-ui
+  - docker run escobard/docker-aws-product-api
 
 after_success:
   - docker build -t escobard/docker-aws-product-ui-prod -f ./ui/Dockerfile.prod ./ui
