@@ -23,7 +23,7 @@ const apiRouteController = process.env.REACT_APP_DOCKER_VARIANT === "nginx_routi
 
 const apiRoot =
   environment === "gcp"
-    ? "https://gcp.api.url"
+    ? apiRouteController // setting to same route controller for now, to fix prod
     : apiRouteController;
 
 export const apiRoutes = {
