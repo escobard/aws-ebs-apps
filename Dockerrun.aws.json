@@ -6,6 +6,24 @@
       "image": "escobard/docker-aws-product-ui-prod",
       "hostname" : "ui",
       "essential": false
+    },
+    {
+      "name": "api",
+      "image": "escobard/docker-aws-product-api-prod",
+      "hostname" : "api",
+      "essential": false
+    },
+    {
+      "name": "pgdb",
+      "image": "escobard/docker-aws-product-pgdb-prod",
+      "hostname" : "pgdb",
+      "essential": false
+    },
+    {
+      "name": "nginx",
+      "image": "escobard/docker-aws-product-nginx-prod",
+      "hostname" : "nginx",
+      "essential": true
     }
   ]
 }
