@@ -39,5 +39,3 @@ services:
     build:
       dockerfile: Dockerfile.prod
       context: ./nginx
-    ports:
-      - '5000:3000'
