@@ -16,7 +16,7 @@ after_success:
   - docker build -t escobard/docker-aws-product-pgdb-prod -f ./pgdb/Dockerfile.dev ./pgdb
   - docker build -t escobard/docker-aws-product-nginx-prod -f ./nginx/Dockerfile.prod ./nginx
   # Login to Docker using a single command
-  - echo "DOCKER_PW" | docker login -u "DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
   # Push images to Docker Hub
   - docker push escobard/docker-aws-product-ui-prod
   - docker push escobard/docker-aws-product-api-prod
