@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="749b221e-f394-4a66-a7eb-1bf8575f490e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prod.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/prod.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/ngnix/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ngnix/default.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/components/Footer/__snapshots__/Footer.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/components/Footer/__snapshots__/Footer.test.js.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/components/Form/__snapshots__/Form.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/components/Form/__snapshots__/Form.test.js.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/components/Header/__snapshots__/Navigation.test.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/components/Note/Note.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/components/Note/Note.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/constants/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577316363852</updated>
       <workItem from="1577316366752" duration="2818000" />
+      <workItem from="1577364761034" duration="4284000" />
     </task>
     <task id="LOCAL-00001" summary="section 9 - feat:  last commit, prod ready">
       <created>1577316948408</created>
@@ -88,27 +83,62 @@
       <option name="project" value="LOCAL" />
       <updated>1577318201556</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="section 10 - fix: all layers are prod ready!">
+      <created>1577322994437</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577322994437</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="section 9 - feat:  last commit, prod ready" />
     <MESSAGE value="section 10 - fix: prod fixes for PGDB, debugging prod layers" />
     <MESSAGE value="section 10 - fix: other round of prod Dockerfile fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 10 - fix: other round of prod Dockerfile fixes" />
+    <MESSAGE value="section 10 - fix: all layers are prod ready!" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 10 - fix: all layers are prod ready!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2298" y="483" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577318320093">
       <screen x="0" y="0" width="5120" height="1400" />
     </state>
     <state x="2298" y="483" key="#com.intellij.fileTypes.FileTypeChooser/0.0.5120.1400@0.0.5120.1400" timestamp="1577318320093" />
-    <state x="1288" y="0" width="2544" height="1400" key="CommitChangelistDialog2" timestamp="1577318200225">
+    <state x="1288" y="0" width="2544" height="1400" key="CommitChangelistDialog2" timestamp="1577322993421">
       <screen x="0" y="0" width="5120" height="1400" />
     </state>
-    <state x="1288" y="0" width="2544" height="1400" key="CommitChangelistDialog2/0.0.5120.1400@0.0.5120.1400" timestamp="1577318200225" />
+    <state x="1288" y="0" width="2544" height="1400" key="CommitChangelistDialog2/0.0.5120.1400@0.0.5120.1400" timestamp="1577322993421" />
+    <state width="2500" height="388" key="GridCell.Tab.0.bottom" timestamp="1577325199733">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state width="2500" height="388" key="GridCell.Tab.0.bottom/0.0.5120.1400@0.0.5120.1400" timestamp="1577325199733" />
+    <state width="2500" height="388" key="GridCell.Tab.0.center" timestamp="1577325199732">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state width="2500" height="388" key="GridCell.Tab.0.center/0.0.5120.1400@0.0.5120.1400" timestamp="1577325199732" />
+    <state width="2500" height="388" key="GridCell.Tab.0.left" timestamp="1577325199732">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state width="2500" height="388" key="GridCell.Tab.0.left/0.0.5120.1400@0.0.5120.1400" timestamp="1577325199732" />
+    <state width="2500" height="388" key="GridCell.Tab.0.right" timestamp="1577325199732">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state width="2500" height="388" key="GridCell.Tab.0.right/0.0.5120.1400@0.0.5120.1400" timestamp="1577325199732" />
     <state x="2204" y="372" width="731" height="662" key="find.popup" timestamp="1577316842341">
       <screen x="0" y="0" width="5120" height="1400" />
     </state>
