@@ -19,8 +19,7 @@ describe("Testing health route", () => {
     request(server)
       .get("/health")
       .expect({
-        healthy: true,
-        process: "dev"
+        healthy: true
       })
       .end((err, res) => {
         if (err) return done(err);

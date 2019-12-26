@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form snapshot renders should render note component 1`] = `
+<Grid
+  columns="equal"
+  id="undefined-note"
+>
+  <GridColumn>
+    <i
+      aria-hidden="true"
+      className="sticky note big circular icon"
+    />
+  </GridColumn>
+  <GridColumn
+    className="content"
+    computer={14}
+    mobile={9}
+    tablet={12}
+  >
+    <h3 />
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel nulla sit amet nibh sagittis eleifend. Cras a lacus rutrum ipsum pretium scelerisque sed eu turpis. 
+    </p>
+  </GridColumn>
+  <GridColumn
+    className="date"
+  >
+    <p>
+      9 am
+    </p>
+  </GridColumn>
+</Grid>
+`;

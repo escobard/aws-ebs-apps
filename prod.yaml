@@ -1,5 +1,12 @@
 version: '3'
 services:
+  postgres:
+    container_name: pgdb_dev
+    build:
+      context: ./pgdb
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5432:5432"
   ui:
     container_name: ui_prod
     working_dir: /usr/create-app/ui
@@ -9,6 +16,8 @@ services:
     build:
       context: ./ui
       dockerfile: Dockerfile.prod
+    ports:
+      - "3000:3000"
   api:
     container_name: api_prod
     working_dir: /usr/create-app/api
@@ -31,4 +40,4 @@ services:
       dockerfile: Dockerfile.prod
       context: ./nginx
     ports:
-      - '5000:80'
+      - '5000:5000'

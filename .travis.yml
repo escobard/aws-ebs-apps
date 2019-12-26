@@ -1,0 +1,24 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t escobard/docker-aws-product-ui-test -f ./ui/Dockerfile.test ./ui
+  - docker build -t escobard/docker-aws-product-api-test -f ./api/Dockerfile.test ./api
+
+scripts:
+  - docker run escobard/docker-aws-product-ui-test
+  - docker run escobard/docker-aws-product-api-test
+
+after_success:
+  - docker build -t escobard/docker-aws-product-ui-prod -f ./ui/Dockerfile.prod ./ui
+  - docker build -t escobard/docker-aws-product-api-prod -f ./api/Dockerfile.prod ./api
+  - docker build -t escobard/docker-aws-product-pgdb-prod -f ./pgdb/Dockerfile.dev ./pgdb
+  - docker build -t escobard/docker-aws-product-nginx-prod -f ./nginx/Dockerfile.prod ./nginx
+  # Login to Docker using a single command
+  - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
+  # Push images to Docker Hub
+  - docker push escobard/docker-aws-product-ui-prod
+  - docker push escobard/docker-aws-product-api-prod
+  - docker push escobard/docker-aws-product-pgdb-prod
+  - docker push escobard/docker-aws-product-nginx-prod
