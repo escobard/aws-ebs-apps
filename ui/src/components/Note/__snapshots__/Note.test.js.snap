@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Form snapshot renders should render makeDonation form and fields correctly 1`] = `
+exports[`Form snapshot renders should render note component 1`] = `
 <Grid
   columns="equal"
   id="undefined-note"
