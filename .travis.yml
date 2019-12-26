@@ -7,8 +7,8 @@ before_install:
   - docker build -t escobard/docker-aws-product-api-test -f ./api/Dockerfile.test ./api
 
 scripts:
-  - docker run escobard/docker-aws-product-ui
-  - docker run escobard/docker-aws-product-api
+  - docker run escobard/docker-aws-product-ui-test
+  - docker run escobard/docker-aws-product-api-test
 
 after_success:
   - docker build -t escobard/docker-aws-product-ui-prod -f ./ui/Dockerfile.prod ./ui
