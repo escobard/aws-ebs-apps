@@ -34,6 +34,7 @@ services:
     build:
       context: ./api
       dockerfile: Dockerfile.prod
+  ## could potentially remove this layer, all logic works off UI ngnix locally
   nginx:
     restart: always
     build:
