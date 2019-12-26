@@ -1,11 +1,12 @@
 {
   "AWSEBDockerrunVersion": 2,
+  // here is where we define our service containers, like with docker-compose
   "containerDefinitions": [
     {
-      "name": "ui",
-      "image": "escobard/docker-aws-product-ui-prod",
-      "hostname" : "ui",
-      "essential": false
+      "name": "ui", //internal name for AWS logs
+      "image": "escobard/docker-aws-product-ui-prod", //docker hub image location
+      "hostname" : "ui", //hostname for internal aws / ngnix requests
+      "essential": false //if marked as true, when this container crashes, all other containers are shut down
     },
     {
       "name": "api",
@@ -24,12 +25,14 @@
       "image": "escobard/docker-aws-product-nginx-prod",
       "hostname" : "nginx",
       "essential": true,
+      // sets up the parent port(s)
       "portMappings": [
         {
           "hostPort": 5000,
           "containerPort": 5000
         }
       ],
+      // links the ui + api hosts to ngnix so ngnix can call these containers via the abbreviated hostname
       "links" : ["ui", "api"]
     }
   ]
