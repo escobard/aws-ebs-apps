@@ -37,7 +37,6 @@ services:
     container_name: pgdb_dev
     build:
       context: ./pgdb
-      dockerfile: Dockerfile.dev
     ports:
       - "5432:5432"
   nginx:

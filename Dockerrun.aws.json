@@ -4,7 +4,8 @@
     {
       "name": "ui",
       "image": "escobard/docker-aws-product-ui-prod",
-      "hostname" : "ui"
+      "hostname" : "ui",
+      "essential": false
     }
   ]
 }
