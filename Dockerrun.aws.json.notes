@@ -8,7 +8,8 @@
       "name": "ui", //internal name for AWS logs
       "image": "escobard/docker-aws-product-ui-prod", //docker hub image location
       "hostname" : "ui", //hostname for internal aws / ngnix requests
-      "essential": false //if marked as true, when this container crashes, all other containers are shut down
+      "essential": false, //if marked as true, when this container crashes, all other containers are shut down
+      "memory": 128 //adds the memory that is allowed for the
     },
     {
       "name": "api",
