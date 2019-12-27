@@ -1,0 +1,36 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "ui",
+      "image": "escobard/docker-aws-product-ui-prod",
+      "hostname" : "ui",
+      "essential": false
+    },
+    {
+      "name": "api",
+      "image": "escobard/docker-aws-product-api-prod",
+      "hostname" : "api",
+      "essential": false
+    },
+    {
+      "name": "postgres",
+      "image": "escobard/docker-aws-product-pgdb-prod",
+      "hostname" : "postgres",
+      "essential": false
+    },
+    {
+      "name": "nginx",
+      "image": "escobard/docker-aws-product-nginx-prod",
+      "hostname" : "nginx",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 5000,
+          "containerPort": 5000
+        }
+      ],
+      "links" : ["ui", "api", "postgres"]
+    }
+  ]
+}

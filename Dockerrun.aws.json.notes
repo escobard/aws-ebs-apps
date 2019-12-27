@@ -1,0 +1,42 @@
+// Documentation for our `Dockerrun.aws.json` file here: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definitions
+// environment variables are picked up from EB settings by all defined containers
+{
+  "AWSEBDockerrunVersion": 2,
+  // here is where we define our service containers, like with docker-compose
+  "containerDefinitions": [
+    {
+      "name": "ui", //internal name for AWS logs
+      "image": "escobard/docker-aws-product-ui-prod", //docker hub image location
+      "hostname" : "ui", //hostname for internal aws / ngnix requests
+      "essential": false //if marked as true, when this container crashes, all other containers are shut down
+    },
+    {
+      "name": "api",
+      "image": "escobard/docker-aws-product-api-prod",
+      "hostname" : "api",
+      "essential": false
+    },
+    {
+      "name": "pgdb",
+      "image": "escobard/docker-aws-product-pgdb-prod",
+      "hostname" : "pgdb",
+      "essential": false
+    },
+    {
+      "name": "nginx",
+      "image": "escobard/docker-aws-product-nginx-prod",
+      "hostname" : "nginx",
+      "essential": true,
+      // sets up the parent port(s)
+      "portMappings": [
+        {
+          "hostPort": 5000,
+          "containerPort": 5000
+        }
+      ],
+      // links the ui + api containers to ngnix so ngnix can call these containers via the abbreviated hostname
+      // important to note, the link definition here refers to the container name, not the container hostname
+      "links" : ["ui", "api"]
+    }
+  ]
+}
