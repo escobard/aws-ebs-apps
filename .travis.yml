@@ -23,3 +23,16 @@ after_success:
   - docker push escobard/docker-aws-product-api-prod
   - docker push escobard/docker-aws-product-pgdb-prod
   - docker push escobard/docker-aws-product-nginx-prod
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: docker-aws-product
+  env: DockerAwsProduct-env
+  bucket_name: elasticbeanstalk-us-east-2-689097371951
+  bucket_path: docker-aws-product
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY

@@ -1,4 +1,5 @@
 // Documentation for our `Dockerrun.aws.json` file here: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definitions
+// environment variables are picked up from EB settings by all defined containers
 {
   "AWSEBDockerrunVersion": 2,
   // here is where we define our service containers, like with docker-compose
