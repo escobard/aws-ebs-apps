@@ -14,9 +14,9 @@
       "essential": false
     },
     {
-      "name": "pgdb",
+      "name": "postgres",
       "image": "escobard/docker-aws-product-pgdb-prod",
-      "hostname" : "pgdb",
+      "hostname" : "postgres",
       "essential": false
     },
     {
@@ -30,7 +30,7 @@
           "containerPort": 5000
         }
       ],
-      "links" : ["ui", "api"]
+      "links" : ["ui", "api", "postgres"]
     }
   ]
 }

@@ -4,8 +4,6 @@ services:
     container_name: pgdb_dev
     build:
       context: ./pgdb
-    ports:
-      - "5432:5432"
   ui:
     container_name: ui_prod
     working_dir: /usr/create-app/ui
