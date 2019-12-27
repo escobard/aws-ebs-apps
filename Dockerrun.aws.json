@@ -5,25 +5,29 @@
       "name": "ui",
       "image": "escobard/docker-aws-product-ui-prod",
       "hostname" : "ui",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "api",
       "image": "escobard/docker-aws-product-api-prod",
       "hostname" : "api",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "postgres",
       "image": "escobard/docker-aws-product-pgdb-prod",
       "hostname" : "postgres",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "nginx",
       "image": "escobard/docker-aws-product-nginx-prod",
       "hostname" : "nginx",
       "essential": true,
+      "memory": 128,
       "portMappings": [
         {
           "hostPort": 5000,
