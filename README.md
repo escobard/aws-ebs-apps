@@ -14,3 +14,6 @@ Over-the-top tech stack was chosen to experiment with multi-container CI / CD pr
 
 Documentation for our `Dockerrun.aws.json` file here: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definitions
 
+## AWS dedicated DB
+
+For this stack, a containerized DB instance was chosen instead of a managed AWS solution to save money.

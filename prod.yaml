@@ -10,7 +10,6 @@ services:
     container_name: ui_prod
     working_dir: /usr/create-app/ui
     environment:
-      - DOCKER_VARIANT=compose_routing
       - REACT_APP_DOCKER_VARIANT=nginx_routing
     build:
       context: ./ui
@@ -22,7 +21,6 @@ services:
     working_dir: /usr/create-app/api
     environment:
       - DOCKER_VARIANT=nginx_routing
-      - REACT_APP_DOCKER_VARIANT=nginx_routing
       - PGUSER=postgres
       - PGHOST=postgres
       - PGDATABASE=postgres
