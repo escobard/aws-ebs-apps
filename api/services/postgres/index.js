@@ -36,6 +36,8 @@ sequelize
     console.error('Unable to connect to the database:', err);
   });
 
+
+// TODO - should migrate this logic over a to a middleware so that its only called on route calls
 const { Users } = models;
 
 Users.findAll().then(values => {
@@ -50,7 +52,6 @@ Users.findAll().then(values => {
   }
 })
 
-module.exports.default =
 module.exports = {
   sequelize,
   models
