@@ -6,3 +6,5 @@ const keys = {
     pgPassword: process.env.PGPASSWORD,
     pgPort: process.env.PGPORT
 }
+
+console.log('keys', keys)
