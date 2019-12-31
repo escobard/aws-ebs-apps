@@ -19,12 +19,14 @@ const environment =
   process.env.NODE_ENV === "production" ? "gcp" : "development";
 
 // expand in the future with more variants
-const apiRouteController = "http://localhost:4000";
+const apiRouteController = process.env.REACT_APP_DOCKER_VARIANT === "nginx_routing" ? "/api" : "http://localhost:4000" ;
 
 const apiRoot =
   environment === "gcp"
     ? apiRouteController // setting to same route controller for now, to fix prod
     : apiRouteController;
+
+console.log('api controller', apiRouteController)
 
 export const apiRoutes = {
   addNote: `${apiRoot + "/addNote"}`,
