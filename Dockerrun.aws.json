@@ -34,7 +34,7 @@
           "containerPort": 80
         }
       ],
-      "links" : ["ui", "api", "postgres"]
+      "links" : ["ui", "api"]
     }
   ]
 }
