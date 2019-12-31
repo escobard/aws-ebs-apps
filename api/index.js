@@ -14,6 +14,6 @@ let server = app.listen(port, () =>
   console.log(`Example app listening on port ${port}!`)
 );
 
-console.log('environment', process.env)
+console.log('environment', process.env.DOCKER_VARIANT)
 
 module.exports = server;
