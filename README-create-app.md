@@ -41,7 +41,7 @@ The following scripts can be used to run the UI and the API via docker-compose.
 
 `npm run clean`
 
-## Product Technology
+## Product Summary
 
 This product follows the traditional MVC (Model View Controller) paradigm where:
    - The Model = the PostgreSQL database - is handled in the `/pgdb` directory

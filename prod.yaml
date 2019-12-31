@@ -25,6 +25,8 @@ services:
     build:
       context: ./api
       dockerfile: Dockerfile.prod
+    ports:
+      - '4000:4000'
   ## could potentially remove this layer, all logic works off UI ngnix locally
   nginx:
     restart: always
@@ -32,4 +34,4 @@ services:
       dockerfile: Dockerfile.prod
       context: ./nginx
     ports:
-      - '5000:80'
+      - '5000:5000'
