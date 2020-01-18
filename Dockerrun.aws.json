@@ -16,13 +16,6 @@
       "memory": 128
     },
     {
-      "name": "postgres",
-      "image": "escobard/docker-aws-product-pgdb-prod",
-      "hostname" : "postgres",
-      "essential": false,
-      "memory": 128
-    },
-    {
       "name": "nginx",
       "image": "escobard/docker-aws-product-nginx-prod",
       "hostname" : "nginx",
@@ -34,7 +27,7 @@
           "containerPort": 80
         }
       ],
-      "links" : ["ui", "api", "postgres"]
+      "links" : ["ui", "api"]
     }
   ]
 }

@@ -3,6 +3,7 @@
 {
   "AWSEBDockerrunVersion": 2,
   // here is where we define our service containers, like with docker-compose
+  // each of these containers is passed the environment variables that are defined within the elastic beanstalk instance
   "containerDefinitions": [
     {
       "name": "ui", //internal name for AWS logs
