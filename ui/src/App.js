@@ -148,10 +148,12 @@ class App extends Component {
    **/
 
   renderNotes(id, data){
-    if (data.length === 0) {return <p>No notes</p>}
-    return data.map((object, index) =>{
-      return <Note key={id + index} id={`${id}-${index}`} data={object} />
-    })
+    if (Array.isArray(data) && data.length >= 1) {
+      data.map((object, index) =>{
+        return <Note key={id + index} id={`${id}-${index}`} data={object} />
+      })
+    }
+    return <p>No notes</p>
   }
 
   render() {

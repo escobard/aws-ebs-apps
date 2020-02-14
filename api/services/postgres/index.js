@@ -22,6 +22,7 @@ const sequelize = new Sequelize(
   },
 );
 
+// this creates models in the DB if none are defined, pretty crazy stuff...
 const models = {
   Users: sequelize.import('./models/users'),
   Notes: sequelize.import('./models/notes')
