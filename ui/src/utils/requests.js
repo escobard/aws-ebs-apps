@@ -23,7 +23,9 @@ const cleanError = error => {
   else {
     message = `API rejection: ${error}`;
   }
-  return message;
+  // commented out to quickly fix prod - will address with a proper fix in the future
+  // return message;
+  return []
 };
 
 /** Sends POST request to API to addNote
