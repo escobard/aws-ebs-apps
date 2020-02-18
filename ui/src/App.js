@@ -148,12 +148,12 @@ class App extends Component {
    **/
 
   renderNotes(id, data){
-    if (data.length >= 1) {
-      data.map((object, index) =>{
+    console.log('data', Array.isArray(data) && data.length !== 0)
+    if (Array.isArray(data) && data.length !== 0) {
+      return data.map((object, index) =>{
         return <Note key={id + index} id={`${id}-${index}`} data={object} />
       })
     }
-
     // TODO - set up a case for API errors - should update a global state as well, to disable note addition
 
     return <p>No notes</p>
