@@ -25,7 +25,7 @@ const cleanError = error => {
   }
   // commented out to quickly fix prod - will address with a proper fix in the future
   // return message;
-  return []
+  return message;
 };
 
 /** Sends POST request to API to addNote
