@@ -4,6 +4,10 @@ services:
     container_name: pgdb_prod
     build:
       context: ./pgdb
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
   ui:
     container_name: ui_prod
     working_dir: /usr/create-app/ui
@@ -36,4 +40,4 @@ services:
       dockerfile: Dockerfile.prod
       context: ./nginx
     ports:
-      - '5000:5000'
+      - '80:80'
