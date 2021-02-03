@@ -1,6 +1,5 @@
 # docker-courses-aws-product
-
-Production version available here: http://create-app.us-east-2.elasticbeanstalk.com/
+Staging version available here: http://dockerawsproduct-env.gbizwcsqxb.us-east-2.elasticbeanstalk.com
 
 ## Product Summary
 
