@@ -4,8 +4,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t escobard/docker-aws-product-ui-test -f ./client/ui/Dockerfile.test ./ui
-  - docker build -t escobard/docker-aws-product-api-test -f ./server/api/Dockerfile.test ./api
+  - docker build -t escobard/docker-aws-product-ui-test -f ./client/ui/docker/Dockerfile.test ./client/ui
+  - docker build -t escobard/docker-aws-product-api-test -f ./server/api/docker/Dockerfile.test ./server/api
 
 scripts:
   - docker run escobard/docker-aws-product-ui-test
@@ -13,8 +13,8 @@ scripts:
 
 after_success:
   # TODO - for GCP - ensure each image (coming from dockerhub) works out of the box for both GCP and AWS
-  - docker build -t escobard/docker-aws-product-ui-prod -f ./client/ui/Dockerfile.prod ./ui
-  - docker build -t escobard/docker-aws-product-api-prod -f ./server/api/Dockerfile.prod ./api
+  - docker build -t escobard/docker-aws-product-ui-prod -f ./client/ui/docker/Dockerfile.prod ./client/ui
+  - docker build -t escobard/docker-aws-product-api-prod -f ./server/api/docker/Dockerfile.prod ./server/api
   - docker build -t escobard/docker-aws-product-nginx-prod -f ./nginx/Dockerfile.prod ./nginx
   # Login to Docker using a single command - this may not be working due to my PW's special characters, need may need to further debug
   - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
