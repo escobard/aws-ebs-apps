@@ -1,9 +1,11 @@
-FROM node:lts as builder
+FROM node:lts
+WORKDIR /usr/create-app/ui
 
-WORKDIR /usr/aws-cloud-apps/ui
-
-COPY ./package.json ./
+COPY ./package.json .
+COPY ./src ./src
+COPY ./scripts ./scripts
+COPY ./config ./config
+COPY ./public ./public
 
 RUN npm install
-
-COPY . ./
+CMD ["npm", "run", "test"]
