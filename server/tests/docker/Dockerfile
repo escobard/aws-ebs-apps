@@ -1,5 +1,5 @@
 FROM node:alpine
-WORKDIR /usr/cloud-apps/integration
+WORKDIR /usr/aws-cloud-apps/integration
 
 COPY ./package.json ./
 

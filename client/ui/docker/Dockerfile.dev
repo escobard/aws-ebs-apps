@@ -1,5 +1,5 @@
 FROM node:lts
-WORKDIR /usr/cloud-apps/ui
+WORKDIR /usr/aws-cloud-apps/ui
 COPY ./package.json ./
 
 ## WAIT mod

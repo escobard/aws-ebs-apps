@@ -1,39 +1,39 @@
 version: '3'
 services:
   postgres:
-    container_name: pgdb_prod
+    container_name: postgres_prod
     build:
-      context: ./pgdb
+      context: ./server/postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
   ui:
     container_name: ui_prod
-    working_dir: /usr/create-app/ui
-    environment:
-      - REACT_APP_DOCKER_VARIANT=nginx_routing
+    working_dir: /usr/aws-cloud-apps/ui
     build:
-      context: ./ui
-      dockerfile: Dockerfile.prod
+      context: ./client/ui
+      dockerfile: docker/Dockerfile.prod
     ports:
-      - '3000:3000'
+      - "3000:3000"
   api:
     container_name: api_prod
-    working_dir: /usr/create-app/api
+    working_dir: /usr/aws-cloud-apps/api
     environment:
-      - DOCKER_VARIANT=nginx_routing
       - PGUSER=postgres
       - PGHOST=postgres
       - PGDATABASE=postgres
       - PGPASSWORD=postgres_password
       - PGPORT=5432
-    build:
-      context: ./api
-      dockerfile: Dockerfile.prod
     ports:
-      - '4000:4000'
-  ## could potentially remove this layer, all logic works off UI ngnix locally
+    - "4000:4000"
+    build:
+      context: ./server/api
+      dockerfile: docker/Dockerfile.prod
   nginx:
     restart: always
     build:
       dockerfile: Dockerfile.prod
       context: ./nginx
     ports:
-      - '5000:5000'
+      - '80:80'

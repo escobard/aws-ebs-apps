@@ -1,5 +1,5 @@
 FROM node:alpine
-WORKDIR /usr/cloud-apps/e2e
+WORKDIR /usr/aws-cloud-apps/e2e
 
 COPY ./package.json ./
 
