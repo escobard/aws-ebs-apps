@@ -44,6 +44,7 @@ beforeAll(done => {
 afterEach(done => {
   jest.clearAllMocks();
   jest.restoreAllMocks();
+  jest.resetAllMocks();
   done();
 });
 
