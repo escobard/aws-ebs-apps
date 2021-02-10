@@ -1,37 +1,51 @@
-# docker-courses-aws-product
+# aws-cloud-apps &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) [![Build Status](https://travis-ci.com/escobard/aws-cloud-apps.svg?token=JTpJTc2HAT5qerWk5eCp&branch=master)](https://travis-ci.com/escobard/aws-cloud-apps) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/escobard/aws-cloud-apps#pull-requests) 
 
-Production version available here: http://create-app.us-east-2.elasticbeanstalk.com/
+A simple product hosted on Amazon Web Services, forked from [escobard/aws-cloud-apps](https://github.com/escobard/aws-cloud-apps).
 
-## Product Summary
+Staging version available here: http://dockerawsproduct-env.gbizwcsqxb.us-east-2.elasticbeanstalk.com.
+  
+## Quickstart
 
-Section 8-11 of the Docker and Kubernetes: the complete guide on udemy.
+[Node.js](https://nodejs.org/en/), [npm](https://www.npmjs.com/), [Docker](https://www.docker.com/) and [Docker compose](https://docs.docker.com/compose/) must be installed.
+        
+#### Development        
+ `npm run dev`            
+  
+#### Production        
+ `npm run start`   
+ 
+#### Integration tests
 
-Boilerplate application forked from [escobard/create-app](https://github.com/escobard/create-app). 
+`npm run integration-tests`
 
-Expanded documentation on app usage here: [escobard/create-app/README.md](https://github.com/escobard/create-app/blob/master/README.md)
+#### End to End tests
 
-Over-the-top tech stack was chosen to experiment with multi-container CI / CD practices with AWS:
- - using nginx to route requests to either react UI or express server API.
- - PostgresDB to store values that have been calculated.
- - React user interface as the controller.
- - Node.js API.
+`npm run e2e-tests`
 
-## AWS Elastic Beanstalk with Containers
+## Commits
 
-Documentation for our `Dockerrun.aws.json` file here: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definitions
+Our commits follow the [Angular commit styleguide](https://gist.github.com/brianclements/841ea7bffdb01346392c). Each commit should be carefully thought out and only contain files affected within the scope of the commit message.
 
-## AWS dedicated DB
+## Branching
 
-For this stack, a containerized DB instance was chosen instead of a managed AWS solution to save money.
+A branch's name should reference a story and the type of work being committed.
 
-### Contribution
+## Pull Requests
 
-All files in this repository are protected under the MIT license, but feel free to contribute, fork, star, or share this application as you see fit.
+Each pull request must pass a review from another contributor and all automated tests.
 
-For commercial or educational use, please paste a link to this repository to give proper credit.
+## Useful links
 
-## Libraries, Frameworks & Tools
+[UI](https://github.com/escobard/aws-cloud-apps/blob/master/client/ui)
 
-[Amazon Web Services](https://aws.amazon.com/)
+[API](https://github.com/escobard/aws-cloud-apps/blob/master/server/api)
 
-[Travis CI](https://travis-ci.com/)
+[Database](https://github.com/escobard/aws-cloud-apps/tree/master/server/postgres)
+
+[Integration tests](https://github.com/escobard/aws-cloud-apps/tree/master/server/tests)
+
+[End to end tests](https://github.com/escobard/aws-cloud-apps/tree/master/client/tests)
+
+## License
+
+This repository is protected under the [MIT License](https://choosealicense.com/licenses/mit/).
