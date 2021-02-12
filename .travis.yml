@@ -8,8 +8,8 @@ before_install:
   - docker build -t escobard/docker-aws-product-api-test -f ./server/api/docker/Dockerfile.test ./server/api
 
 scripts:
-  - docker run escobard/docker-aws-product-ui-test
-  - docker run escobard/docker-aws-product-api-test
+  - docker run escobard/docker-aws-product-ui-test || travis_terminate 1
+  - docker run escobard/docker-aws-product-api-test || travis_terminate 1
 
 after_success:
   # TODO - for GCP - ensure each image (coming from dockerhub) works out of the box for both GCP and AWS
