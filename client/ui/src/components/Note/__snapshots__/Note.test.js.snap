@@ -22,6 +22,11 @@ exports[`Note >> snapshot is up to date 1`] = `
       <p>
         Test note
       </p>
+      <button>
+         
+        Edit
+         
+      </button>
     </div>
     <div
       class="two wide computer four wide mobile two wide tablet column date"

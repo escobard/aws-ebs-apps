@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 import { Grid } from "semantic-ui-react";
 
+import Button from "../Button";
+
 import "./Note.scss";
 
 // TODO - improve grid structure for error cases
@@ -21,6 +23,7 @@ const Note = ({ data: { subject, note, date, icon } }) => (
     <Grid.Column mobile={9} tablet={12} computer={13} className="content">
       <h3>{subject}</h3>
       <p>{note}</p>
+      <Button callback={() => alert("I was clicked!")} text={"Edit"} />
     </Grid.Column>
     {date && (
       <Grid.Column mobile={4} tablet={2} computer={2} className="date">
