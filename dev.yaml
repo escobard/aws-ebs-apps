@@ -6,7 +6,6 @@ services:
       context: ./server/postgres
     ports:
       - "5432:5432"
-    # TODO - replace this by creating a default superadmin with SQL for phase 4
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
   api:

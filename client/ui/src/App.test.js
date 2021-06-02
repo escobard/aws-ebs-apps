@@ -41,7 +41,7 @@ describe("User flows", () => {
         );
       });
       act(() => {
-        fireEvent.click(getByRole("button"));
+        fireEvent.click(getByLabelText("Add note"));
       });
       act(() => {
         fireEvent.change(getByLabelText("Subject"), {
