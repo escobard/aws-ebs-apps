@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import "./Button.scss"
+
 const Button = ({ text, callback }) => (
-  <button onClick={() => callback()}> {text} </button>
+  <button className="button" onClick={() => callback()}> {text} </button>
 );
 
 Button.propTypes = {
