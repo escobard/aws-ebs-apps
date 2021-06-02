@@ -4,7 +4,7 @@ describe("Button", () => {
 
   const props = {
     text: "Some button text",
-    callback: () => jest.fn()
+    callback: jest.fn()
   };
 
   afterAll(() => {
@@ -29,6 +29,6 @@ describe("Button", () => {
     } = props;
     const { getByText } = render(<Button {...props} />);
     fireEvent.click(getByText(text));
-    expect(callback).toHaveBeenCalled();
+    expect(callback).toHaveBeenCalledTimes(1);
   })
 });
