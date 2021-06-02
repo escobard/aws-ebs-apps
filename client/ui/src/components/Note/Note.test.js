@@ -30,6 +30,11 @@ describe("Note", () => {
     expect(container.querySelector(".sticky.note"));
   });
 
+  it(">> shows button with text", () => {
+    const { getByText } = render( <Note {...props} />);
+    expect(getByText('Edit'));
+  });
+
   it(">> should hide date when no date is given", () => {
     props.data.date = undefined;
     const { container } = render(<Note {...props} />);
